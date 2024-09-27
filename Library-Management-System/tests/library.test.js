@@ -22,9 +22,9 @@ describe('Library Management System', () => {
     expect(library.viewAvailableBooks().length).toBe(0);
   });
 
-  // test('should not allow borrowing a non-existent book', () => {
-  //   expect(() => library.borrowBook('999999999')).toThrow('Book not found or unavailable');
-  // });
+  test('should not allow borrowing a non-existent book', () => {
+    expect(() => library.borrowBook('999999999')).toThrow('Book not found or unavailable');
+  });
 
   // test('should allow returning a borrowed book', () => {
   //   library.addBook(book);
